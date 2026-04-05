@@ -10,6 +10,7 @@ cursorline = true
 cursorcolumn = true
 auto-format = false
 completion-timeout = 5
+rulers = [80]
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
@@ -31,7 +32,7 @@ skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
-wrap-at-text-width = true
+# wrap-at-text-width = true
 wrap-indicator = ""
 
 [editor.cursor-shape]
