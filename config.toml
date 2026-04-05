@@ -3,6 +3,36 @@ theme = "rose_pine_moon"
 [editor]
 line-number = "relative"
 mouse = false
+color-modes = true
+end-of-line-diagnostics = "disable"
+auto-pairs = false
+cursorline = true
+cursorcolumn = true
+auto-format = false
+completion-timeout = 5
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "disable"
+
+[editor.statusline]
+separator = ":"
+left = ["mode", "spinner", "version-control", "separator", "file-name", "read-only-indicator", "file-modification-indicator"]
+center = []
+right = ["diagnostics", "position", "file-encoding", "total-line-numbers", "file-type"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+wrap-indicator = ""
 
 [editor.cursor-shape]
 insert = "bar"
