@@ -17,13 +17,34 @@ cursor-line = "warning"
 other-lines = "disable"
 
 [editor.statusline]
-separator = ":"
-left = ["mode", "spinner", "version-control", "separator", "file-name", "read-only-indicator", "file-modification-indicator"]
-center = []
-right = ["diagnostics", "position", "file-encoding", "total-line-numbers", "file-type"]
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+left = [
+    "mode",
+    "selections",
+    "primary-selection-length",
+    "position",
+    "spacer",
+    "position-percentage",
+    "spacer",
+    "separator",
+    "file-name",
+    "file-modification-indicator"
+]
+center = [
+    "spinner",
+    "diagnostics",
+]
+right = [
+    "version-control",
+    "spacer",
+    "separator",
+    "file-type",
+    "file-encoding",
+]
+
+[editor.statusline.mode]
+insert = "INSERT"
+normal = "NORMAL"
+select = "SELECT"
 
 [editor.indent-guides]
 render = true
@@ -43,5 +64,6 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
-[keys.insert]
-j = { k = "normal_mode"}
+[keys.insert.j]
+k = "normal_mode" 
+j = "@j<esc>"
